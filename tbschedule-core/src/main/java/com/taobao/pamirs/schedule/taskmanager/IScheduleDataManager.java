@@ -1,9 +1,10 @@
 package com.taobao.pamirs.schedule.taskmanager;
 
 import com.taobao.pamirs.schedule.TaskItemDefine;
+import org.apache.zookeeper.data.Stat;
+
 import java.util.List;
 import java.util.Map;
-import org.apache.zookeeper.data.Stat;
 
 /**
  * 调度配置中心客户端接口，可以有基于数据库的实现，可以有基于ConfigServer的实现
@@ -83,7 +84,7 @@ public interface IScheduleDataManager {
     /**
      * 清除已经过期的OWN_SIGN的自动生成的数据
      *
-     * @param taskType 任务类型
+     * @param baseTaskType 任务类型
      * @param serverUUID 服务器
      * @param expireDateInternal 过期时间，以天为单位
      */
